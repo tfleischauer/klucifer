@@ -1,0 +1,17 @@
+_notes/
+**/*_notes/
+.DS_Store
+**/*.jpg
+**/*.JPG
+**/*.jpeg
+**/*.JPEG
+**/*.png
+**/*.PNG
+**/*.gif
+.jpg
+.JPG
+.jpeg
+.JPEG
+.png
+.PNG
+.gif

@@ -1,0 +1,1793 @@
+f@charset "UTF-8";
+
+/*
+Theme Name: Klucifer
+Author: Troy Fleischauer
+Author URI: http://www.portfolio.troyfleischauer.com
+Description: Custom theme for rickklu.com
+Version: 190114
+*/
+
+/* DEVO ONLY -- delete when no longer needed */
+div, header, nav, aside, footer, img {
+	outline-style: solid;
+	outline-color: red;
+	outline-width: thin;
+}
+
+/*#wrapper {
+	background-color: cyan;		
+}
+
+header {
+	background-color: darkcyan;
+}
+
+ul {
+	background-color: darkolivegreen;	
+}
+
+li {
+	background-color: crimson;	
+}
+
+#nav-main {
+	background-color: palegoldenrod;
+}
+
+#nav-main ul {
+	background-color: darkseagreen;
+}*/
+
+/* bg color uncommented illustrates what is going 
+   on structurally in this list very well */
+/*#nav-main li a {
+	background-color: deeppink;  
+}
+
+#nav-main li a:hover,
+#nav-main li a:focus {
+	background-color: #999;	
+}
+
+section {
+	background-color: hotpink;
+}
+
+.middle {
+	background-color: lime;
+}
+
+.content {
+	background-color: orchid;
+} 
+
+.sidebar {
+	background-color: thistle;
+} 
+
+footer {
+	background-color: gold;
+}
+
+#nav-footer {
+	background-color: rebeccapurple;
+}
+
+#nav-footer a:link,
+#nav-footer a:visited {
+	background-color: orangered;
+}
+
+table, th, td {
+	outline: 1px solid red;
+}
+
+.title-width {
+	outline: 1px solid green;
+}
+
+.nav-footer-utility {
+	background: paleturquoise;	
+}
+
+#nav-back-more {
+	outline: 1px solid black;	
+}
+
+.foogallery-container {
+	background-color: firebrick;	
+}
+
+div#nav-back-more {
+	background-color: dodgerblue;
+}
+
+.flexslider {
+	background-color: darkslateblue !important;	
+}*/
+
+/* Start WooCommerce Divs */
+nav.woocommerce-breadcrumb {
+	height: 25px;
+	background-color: orange;	
+}
+
+html body.product-template-default.single.single-product.postid-1261.logged-in.admin-bar.no-customize-support.woocommerce.woocommerce-page.woocommerce-no-js div#wrapper div#primary.content-area main#main.site-main div#product-1261.post-1261.product.type-product.status-publish.product_cat-t-shirts.first.instock.taxable.shipping-taxable.purchasable.product-type-variable.has-default-attributes div.woocommerce-product-gallery.woocommerce-product-gallery--without-images.woocommerce-product-gallery--columns-4.images
+
+/* postid-1261 logged-in admin-bar no-customize-support woocommerce woocommerce-page woocommerce-no-js */
+
+img.wp-post-image {
+	opacity: 1 !important;	
+	background-color: grey !important;		
+	outline: 1px solid red !important;	
+	width: 25% !important;
+}
+
+.woocommerce-product-gallery images {
+	opacity: 1 !important;	
+}
+
+/*.woocommerce .single-product .images {
+	opacity: 1 !important;
+	
+}*/
+
+.woocommerce-tabs.wc-tabs-wrapper {
+	/* padding-left: 50px; */
+	
+}
+
+/* End WooCommerce Divs */
+
+/* END DEVO ONLY */
+
+/* START RESETS */
+/* This zeros out the default margin and padding styles on 
+   the body tag and everything nested inside the body tag. */
+body, body * { 
+	margin: 0;
+	padding: 0;		
+}
+/* END RESETS */
+
+/* GLOBAL STYLES */
+/* Prevents re-sizing of body copy on iphone. */
+html { 
+	-webkit-text-size-adjust: none; 
+	-ms-text-size-adjust: none;
+}
+
+body { /* global font styles go on the body tag */
+	font-family: 'PT Sans', 'Trebuchet MS', Helvetica, Arial, sans-serif;
+	font-size: 100%; /* 16px */
+	/* line-height - write 1.5 instead of 150%. Browser default is 118%, 
+	   set to at least 1.3, range of 1.3 - 1.6 is good. */
+	line-height: 1.5; /* 24px */ 
+	color: #FFF; /* White */
+	background-color: #000; /* Black */
+}
+
+/* needs unique id if more than one header on the top */
+header {
+	/*overflow: hidden;*/
+	height: 125px; /* height of logo */
+	padding-left: 35px; /* pushes logo to the right */
+	position: relative; /* for #toggle */
+}
+
+#logo img.desktop {
+
+}
+
+#logo img.phone {
+	display: none;
+}
+		
+header a:link {
+	border-bottom: none;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Oswald', sans-serif;
+	color: #FFF; /* White */
+	/*margin-bottom: 0;
+	margin-top: 0;*/
+}
+
+h2 {
+	margin-top: 0; /* More space above headlines than below them is the rule. */	
+	margin-bottom: 5px;
+}
+
+h3 {
+	margin-top: 15px; /* More space above headlines than below them is the rule. */	
+	margin-bottom: 5px;
+}
+
+a img { 
+	border: none; /* Gets rid of blue border that IE puts around linked images */
+}
+
+a:link,
+a:visited {
+	color: #FFF; /* White */
+	text-decoration:none;
+    /*  Use a border instead of an underline. Underlines are notoriously inflexible. */
+    border-bottom-width: 2px;
+	border-bottom-style: dotted;
+	border-bottom-color: #333;
+}   
+
+a:hover,
+a:focus {
+	border-bottom: 1px solid #FFF;
+	text-decoration: none;
+	border-bottom-color: #FFF;
+}
+
+ul {
+	list-style-position: outside;
+	padding-left: 1.25em;	
+}
+
+ol {
+	list-style-position: outside;
+	padding-left: 2.75em;	
+}
+
+p, ol, ul {
+	margin-bottom: .7em;
+}
+
+li {
+	margin-bottom: .3em;
+}
+
+blockquote {
+	font-family: 'PT Sans', 'Oswald', sans-serif;
+	font-style: normal; 
+	/*font-size: .875em;*/ /* 14px / 16px = .875em  */
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 50px;
+	padding-left: 15px;
+	border-left: 3px solid #FFF;
+}
+
+/* Makes the quote image line up next to the quote, 
+   otherwise the quote is above the p */
+blockquote p {
+  	display: inline;
+}
+
+/* small is an inline element */
+small {
+	display: block;	
+}
+
+.clear {
+	clear: both;	
+}
+
+.to-top {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-size: 0.875em;	/* 14px / 16px = .875em  */ 
+	font-variant: small-caps;
+}
+
+/* Allows media to scale according to their parent elements. */
+img, embed, object, video, iframe {
+	max-width: 100%;	
+}
+
+/* Removes empty Featured Image caption div from page-video.php when page.video.php */
+/* has a class called .page-id-848. This rule written by tremony89 on Fiverr.com */
+/*.page-id-848 .wp-caption {
+	display: none;
+}*/
+
+
+/* START WP GALLERY CAPTIONS ON TOP OF IMAGE */
+/* This theme currently does not use WP GALLERY, but instead uses FooGallery */
+.gallery-item figcaption {
+	text-align: center;
+	background-color: rgba(255,255,255,.70);
+	font-size: 1.1em;
+	padding: 10px;
+	position: absolute;
+	width: 190px; 
+	top: 125px;
+	right: 5px;
+	text-align: center;
+	display: none;
+}
+
+.gallery-item:hover figcaption {
+	display: block; /* #D6D5D6 */
+}
+/* END WP GALLERY CAPTIONS ON TOP OF IMAGE */
+/* END GLOBAL STYLES */
+
+/* LAYOUT STYLES */
+#wrapper { /* sets width and centers */
+	max-width: 840px; /* width of wrapper = 120px #nav-main + 20px gutter + 700px .middle */
+	margin: 5px auto; /*  top and bottom, right and left */
+	overflow: hidden;
+}
+
+/* middle - includes sidebar area */
+.middle {
+	clear: right;
+	float: right;
+	width: 700px;
+	margin-top: 5px;
+}
+
+/* content - does not includes sidebar area */
+.content {
+	width: 470px; /* 470px + 10px padding = 480px */
+	float: left;
+	padding: 0px 10px 0px 0px;
+}
+
+.sidebar {
+	width: 200px;
+	float: right;
+}
+
+section {
+	clear: both;
+	overflow: hidden;
+}
+/* END LAYOUT STYLES */ 
+
+/* NAV-MAIN STYLES */
+#nav-main {
+	width: 120px;
+	float: left;
+	border: none;
+	text-decoration: none;
+	margin-top: 45px;
+	font-style: italic;
+	font-weight: Semi-Bold;
+	font-size: .9em;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+}
+
+#nav-main ul {
+	padding: 0; /* overrides our global ul padding */
+	list-style-type: none;
+}
+
+#nav-main li {
+	font-size: 1.5em; /* 24px / 16px */
+	padding: 0; /* overrides our global li padding */
+}
+
+#nav-main li a {
+	color: #FFF;
+	text-decoration:none;
+	display: block; /* fill the list item */
+	padding: 10px 0px 10px 0px;
+	text-align: right;
+	border-bottom: none;
+}
+
+#nav-main li a:hover,
+#nav-main li a:focus { /* use full descendent selectors */
+	color: #FFF;
+	text-decoration: underline;
+}
+
+#nav-main ul li ul.sub-menu {	
+	font-size: .44em;
+	line-height: .75;
+}
+
+/* START 'YOU ARE HERE' STATE INDICATORS (CURRENT SELECTED MENU ITEM) */
+/* START TOP LEVEL NAV-MAIN */
+#nav-main ul li.current-menu-item a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+#nav-main ul li.current-menu-item ul li a {
+	text-decoration: none;	
+}
+/* END TOP LEVEL NAV-MAIN */
+
+/* START PORTFOLIO NAVIGATION */
+/* START CURRENT PAGE ANCESTOR */
+ul#menu-main li.menu-item-has-children li.current-page-ancestor a {
+	color: #FFF;
+	text-decoration: underline;
+}
+/* END CURRENT PAGE ANCESTOR */
+/* END PORTFOLIO NAVIGATION */
+
+/* START NAV-MAIN ON SINGLE.PHP */
+.single ul#menu-main li.current_page_parent a {
+	color: #FFF;
+	text-decoration: underline;
+}
+/* END NAV-MAIN ON SINGLE.PHP */
+
+/* START ARCHIVE & CATEGORY TEMPLATE 'YOU ARE HERE' STATE INDICATOR */
+.category ul#menu-main li.current_page_parent a, 
+.archive ul#menu-main li.current_page_parent a  {
+	color: #FFF;
+	text-decoration:underline;	
+}
+/* END ARCHIVE & CATEGORY TEMPLATE 'YOU ARE HERE' STATE INDICATOR */
+/* END 'YOU ARE HERE' STATE INDICATORS (CURRENT SELECTED MENU ITEM) */
+
+/* START OPEN OR CLOSE SUB-MENU */
+.sub-menu { 
+	display: none; 
+}
+
+.current_page_item .sub-menu, 
+.current_page_parent .sub-menu,
+.current-page-ancestor .sub-menu { 
+	display: block; 
+}
+
+#toggle {
+	display: none;
+	width: 75px;
+	text-align: right;
+	position: absolute;
+	right: 0;
+	bottom: 6px;
+	font-size: 1em;
+	/*text-transform: capitalize;*/
+}
+
+#toggle a {
+	color: #FFF;
+}
+/* END OPEN OR CLOSE SUB-MENU */
+/* END NAV-MAIN STYLES */
+
+/* START FRONT PAGE STYLES */
+div.home-page  {
+		padding-top: 15px;
+}
+	
+/* FRONT PAGE FLEXSLIDER STYLES */
+/* The <div> containing the images. */
+.flexslider {
+	border: none !important;
+	/*width: 500px;*/
+	width: 700px;
+	margin-bottom: 10px !important;	
+	background-color: black !important;
+}
+
+.flexslider .slides img {
+	width: 680px !important;
+	display: block;
+	height: 680px !important;
+	border: 10px solid #FFF;
+	background-color: black !important;
+}
+
+.flex-direction-nav a {
+	border-bottom: none !important;
+}
+
+.flex-direction-nav a:before  { 
+   font-size: 2.125em !important; /* 34 /16 */
+}
+
+/* Controls the positioning of the indicator dots. */
+.flex-control-nav {
+	bottom: 15px !important;
+	z-index: 2 !important;	
+}
+
+/* Controls the color of the inactive indicator dots. */
+.flex-control-paging li a {
+	background: #FFF !important;
+	opacity: 0.5 !important;	
+}
+
+/* Controls the color of the active indicator dot. */
+.flex-control-paging li a.flex-active {
+	background: #333333 !important;
+	opacity: 0.75 !important;	
+}
+/* END FRONT PAGE FLEXSLIDER STYLES */
+/* END FRONT PAGE STYLES */	
+
+/* START ABOUT PAGE STYLES */
+.about-content p,
+.about-content a,
+.about-content h1,
+.about-content h2,
+.about-content h3,
+.about-content h4,
+.about-content h5,
+.about-content h6,
+.about-content blockquote,
+.about-content ul,
+.about-content ol {
+	max-width: 460px;
+	padding-right: calc(100% * (10/460));
+}
+
+.about-content .wp-caption {
+	padding: 0;
+	margin: 0;	
+	border: none;
+	clear: both;
+} 
+
+.about-content .wp-caption p.wp-caption-text {
+	padding: 0;	
+	margin: 0;
+	width: inherit;
+	/*width: 100%;*/
+	text-align: center;
+	color: #FFF;
+	background-color: #000;
+}
+/* END ABOUT PAGE STYLES */
+
+/* START PORTFOLIO & GALLERY STYLES */
+/* START GLOBAL GALLERY STYLES */
+.middle.portfolio {
+	margin-top: 5px;													
+}
+
+/* Don't control border here, this is for margin. */
+.portfolio img { 
+	display: block;
+	margin-bottom: 20px;	
+}
+
+/* Border around thumbnails (or use #CCC) */	
+.middle.portfolio a img {	
+	border: 5px solid #FFF;	
+	margin: 0 0 0 0; 											
+}
+
+/* Border gets darker when hovering */	
+/* FooGallery overwrites this rule */   
+.middle.portfolio a:hover img, 
+.middle.portfolio a:focus img {
+	/*border: 5px solid rgba(51,51,51,.80); same as rgb #333 */
+	/*border: 5px solid #000;*/
+}
+
+.title-width {
+	width: 460px;	
+	display: inline-block;
+	float: left;
+}
+
+#nav-back-more {
+	width: 220px;
+	display: inline-block;
+	float: right;
+	padding-top: 15px;
+	height: 27px;
+}
+
+#nav-back-more a:link,
+#nav-back-more a:visited {
+	border-bottom: none;	
+}
+
+#nav-back-more a:hover,
+#nav-back-more a:focus {
+	text-decoration: underline;
+}
+
+.back {
+	float:left;
+}
+
+.next {
+	float:right;
+}
+
+figure {
+	position: relative;	
+}
+
+/* Portfolio Series Description */
+.page-template-page-portfolio-gateway p,
+.page-template-page-portfolio p,
+.page-template-page-portfolio-back-more p,
+.page-template-page-portfolio-back p,
+.page-template-page-portfolio-more p {
+	font-size: .55em;	
+	max-width: 445px;
+}
+/* END GLOBAL GALLERY STYLES */
+
+/* START FOOGALLERY STYLES */
+.foogallery-container {
+	clear: both;
+}
+
+.foogallery-default.border-style-square-black a, 
+.foogallery-default.border-style-square-black.foogallery-link-none img {
+	border: none !important;
+}
+
+.foogallery-container a:link, 
+.foogallery-container a:visited {
+  color: #333;
+  text-decoration: none;
+  border-bottom-width: 0; 
+  border-bottom-style: none; 
+  /*border-bottom-color: none;*/
+}
+
+/* Allows three to spread horizontally by removing the margin and padding 
+   of the third square. Otherwise, the third square would wrap around. */
+/*.foogallery-default.spacing-width-20 a:nth-child(3n+0) {
+	margin-right: 0;
+	padding-right: 0;	
+}*/
+ 
+.tp-title {
+   padding: 10px 35px 0px 0px !important;
+   width: 100%;
+   top: auto;
+}
+
+.tp-info, 
+.tp-title {
+   top: auto;
+   width: 100%;
+   text-align: left !important;
+   bottom: 0;
+}
+
+/* Start FooGallery > Galleries > Custom CSS */
+/* Removed the custom CSS from WP-Admin > FooGallery > Galleries > Custom CSS field. */
+/* Added the CSS here so all the CSS is in one place. */
+/* This CSS was used for the 2016 Nalder theme with an older version of FooGallery. */
+.tp-title, .tp-caption {
+ padding: 10px 35px 0px 0px !important;
+ width: 100%;
+ top: auto;
+}
+
+.tp-info, .tp-title, .tp-caption {
+ top: auto;
+ width: 100%;
+ text-align: left !important;
+ bottom: 0;
+}
+/* End FooGallery Custom CSS */
+
+/* Start - Tremonty89 */
+/* Tremonty89 on Fiverr helped me with the following two rules. */
+/* Removes the added right margin on the latest version of the FooGallery plugin (180526) */
+/* Allows three thumbnails to spread horizontally by removing the margin 
+   of the third thumbnail. Otherwise, the third thumbnail would wrap around. */
+.fg-item.fg-loaded {
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.fg-item.fg-loaded:nth-child(3n) {
+	margin-right: 0;
+}
+/* End - Tremonty89 */
+
+/* END FOOGALLERY STYLES */
+                                         /* Cleaned CSS to here */
+/* START FOOBOX STYLES */
+/* Removes rounded corners */
+.fbx-rounded .fbx-inner {
+   border: 8px solid transparent;
+   border-radius: 0 !important; 
+} 
+
+/* X to close Foobox caption */
+a.fbx-close-overlays,
+a#close_overlays {
+	border-bottom: none;
+}
+/* END FOOBOX STYLES */
+
+/* START WORDPRESS GALLERY STYLES */
+/* PORTFOLIO GATEWAY PAGE STYLES - WP GALLERY STYLES */
+.gallery div.wp-caption p.wp-caption-text {
+	/*text-align: center;
+	background-color: rgba(255,255,255,.70);
+	font-size: 1.25em;*/
+}
+
+.gallery div.wp-caption p.wp-caption-text,
+.gallery div.wp-caption p.wp-caption-text {
+	display: none;	
+}
+
+.gallery div#wp-caption a:hover > p.wp-caption-text,
+.gallery div#wp-caption a:focus > p.wp-caption-text {
+	display: block;	
+}
+/* END PORTFOLIO GATEWAY PAGE STYLES - WP GALLERY STYLES */
+
+/* PORTFOLIO DESTINATION - WP GALLERY STYLES */
+/* TUTORIAL: http://logoscreative.co/styling-html5-wordpress-gallery/ */
+.gallery {
+  margin: auto;
+}
+
+.gallery .gallery-item {
+  float: left; /* Change to 'right' if RTL is enabled */
+  margin-top: 10px;
+  text-align: center;
+}
+
+.gallery img {
+  display: block;
+}
+
+.gallery .gallery-caption {
+  margin-left: 0;
+}
+
+.gallery figure {
+	margin-right: 20px;	
+	margin-bottom: 10px;
+	margin-left: 0;
+}
+
+.gallery figure:nth-child(3n+0) {
+	margin-right: 0px;	
+}
+
+.gallery a {
+	border-bottom: none;
+}
+
+a#prevLink,
+a#nextLink,
+a#bottomNavClose,
+a#playPause {
+	border-bottom: none;	
+}
+/* END PORTFOLIO DESTINATION - WP GALLERY STYLES */
+/* END WORDPRESS GALLERY STYLES */
+/* END PORTFOLIO & GALLERY STYLES */
+
+/* START CATEGORY PAGES */
+/* (Pages such as page-video.php and page-merch.php) */
+a.image-in-feed {
+	border-bottom: none;
+}
+
+.content.page-category .image-in-feed img.wp-post-image {
+	border: 3px solid #000;
+	height: auto;
+} 
+
+.content.page-category p.wp-caption-text {
+    font-size: .6875em; /* 11 / 16 */
+    line-height: 1.0625; /* 17 / 16 */
+    margin: 0;
+	text-align: center;
+	border: none;
+	outline: 1px solid ivory;
+	padding-top: 10px;
+}
+
+.content.page-category .wp-caption {
+	max-width: 100%;	
+}
+
+/* For nav-main 'You Are Here' state. 'Events' is active when  
+   'Installalations' and 'Speaking' are removed from the nav-main */
+/*#nav-main ul li.current-page-ancestor a	{
+	color: #333;
+  	text-decoration: underline;	
+}*/
+/* END CATEGORY PAGE */
+
+/* START INDEX.PHP STYLES (BLOG PAGE) */
+.content article.blog-excerpt {
+	overflow: hidden;
+	margin-bottom: 25px;	
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 30px;
+}
+
+.by-line {
+	margin-bottom: 15px;	
+}
+
+.sidebar div.widget {
+	margin-bottom: 20px; 
+}
+
+.widget blockquote {
+	margin-left: 3px;	
+}
+
+nav.prev-next-posts {
+	overflow: hidden;
+}
+
+ul.post-navigation {
+	color: black;	
+}
+/* END INDEX.PHP STYLES (BLOG PAGE) */
+
+/* START SINGLE.PHP */
+.single .wp-caption {
+	max-width: 100%;	
+}
+
+.single .wp-caption p.wp-caption-text {
+	padding-top: 10px;
+}
+
+/* START COMMENTS */
+div#respond {
+	clear: both;	
+}
+
+/* Name, Mail, Website */
+#respond input {
+	width: 450px;
+    height: 34px;
+	margin-bottom: 5px;
+}
+
+/* START COMMENTS SECTION */
+/* Start Sinkula's jetcityimprov.org comment form */
+#commments {
+	padding: 20px 0;
+}
+
+.comment-item {
+	padding: 20px 5px;
+	overflow: hidden;
+}
+	
+.comment-item img.avatar {
+	float: left;
+	margin: 0px 20px 0px 0px;
+}
+	
+.comment-item p.comment-author {	
+	font-size: 120%;
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+			
+.comment-item p.comment-date {
+	font-size: .75em;
+	margin-bottom: 4px;
+}
+	
+.comment-item p.comment-reply  {
+
+}
+	
+label {
+	display: block;
+	margin-bottom: 1px;
+}
+
+#comment-form input {
+	width: 450px;
+	height: 34px;	
+	margin-bottom: 10px;
+	font-size: .95em;
+}
+
+textarea#comment {
+	width: 450px;
+	font-size: .95em;
+	margin-bottom: 10px;
+}
+
+#comment-form input.submit {
+	width: 150px;
+	display: block;
+}
+/* End Sinkula's jetcityimprov.org comment form */
+/* END COMMENTS SECTION */
+/* END COMMENTS */
+/* END SINGLE.PHP */
+
+/* START SIDEBAR NAVIGATION USING CUSTOM FIELDS */
+li.page_item.current_page_item a,
+.category .current-cat a {
+	border-bottom: 1px solid #333;
+	text-decoration: none;
+	border-bottom-color: #333;
+}
+/* END SIDEBAR NAVIGATION USING CUSTOM FIELDS */
+
+/* START FOOTER STYLES */
+/* START 'BASIC' FOOTER STYLES - NO NAVIGATION (as on front-page.php) */
+footer.footer-basic {
+	/*width: 500px;*/
+	width: 700px;
+	float: none;
+	padding: 0;
+	font-size: .75em; /* 12px /16px */
+	text-align: right;
+}
+
+footer p.footer-basic {
+	display: none;	
+}
+/* END 'BASIC' FOOTER STYLES - NO NAVIGATION (as on front-page.php) */
+
+footer {
+	clear: both;
+	width: 700px;
+	float: right;
+	padding: 15px 0px 20px 0px;
+	text-align: left;
+	font-size: 0.875em; /* 14px / 16px */
+	color: #808080; /* light grey */
+	/*height: 80px; */ 
+	/* if height is removed, to accomodate floated columns of text, 
+	   replace with overflow:hidden; this will make the footer expand 
+	   down to enclose the footer's floated contents */
+	overflow: hidden;
+}
+
+footer p {
+	clear: both;	
+}
+
+footer a:link {
+	border-bottom: none;	
+	text-decoration: none;		
+}
+
+/* START FOOTER NAVIGATION STYLES */
+#nav-footer {
+	height: 32px;
+	line-height: 2; /* 32 / 16 */
+	font-size: 1em;	
+	clear: both;
+}
+
+#nav-footer a:link,
+#nav-footer a:visited {
+	border-bottom: none;	
+	text-decoration: none;
+	display: block;	/* fills list item space */
+	padding: 0 25px 0 0; /* creates spacing between nav items */
+}
+
+#nav-footer a:hover,
+#nav-footer a:focus {
+	text-decoration: underline;
+}
+
+#nav-footer ul {
+	padding: 0;
+	overflow: hidden;
+}
+
+nav#nav-footer li {
+	float:left;
+	list-style-type: none;
+	margin-bottom: 0;
+	padding-bottom: 0;	
+}
+
+.nav-footer-utility {
+	width: 100%;
+	overflow: hidden;
+}
+
+.nav-footer-utility a:link,
+.nav-footer-utility a:visited {
+	color: #808080; 
+}
+
+.nav-footer-utility a:hover,
+.nav-footer-utility a:focus {
+	color:#808080; /* light grey */
+	text-decoration:none;
+	text-decoration:underline;
+}
+
+.nav-footer-utility ul {
+	clear:both;
+	padding: 0;
+	padding-left: 0;
+	font-size: .625em; /* 10px / 16px */
+	display:block;   
+	overflow: hidden; 
+}
+	
+.nav-footer-utility li {	
+	float: left;
+	list-style-type: none;	
+	padding-left: .5px;
+	padding-right: 20px;
+	/*line-height: .625;*/ /* 10 / 16 */
+	line-height: .925;
+}
+
+#menu-footer-menu {
+	margin-bottom: 0;	
+}
+
+nav#nav-footer {
+	margin-bottom: 0;
+}
+
+/* START NAV-FOOTER 'YOU ARE HERE' STYLES */
+#nav-footer ul li.current-menu-item a,
+#nav-footer ul li.current-page-ancestor a,
+#nav-footer ul li.current_page_parent a {
+	color: #FFF;
+	text-decoration:underline;
+}
+/* END NAV-FOOTER 'YOU ARE HERE' STYLES */
+/* END FOOTER NAVIGATION STYLES */
+
+/* START SITE MAP STYLES */
+.wsp-pages-list,
+.wsp-posts-list,
+.wsp-category-title {
+	font-size: .85em;	
+}
+
+.wsp-pages-title,
+.wsp-posts-title {
+	text-transform: capitalize;
+}
+/* END SITE MAP STYLES */
+
+#copyright {
+	padding-left: 1px;
+}
+/* END FOOTER STYLES */
+
+/*** START PLUGIN OVERRIDE STYLES ***/
+
+/* START CONTACT FORM 7 STYLES */
+.wpcf7 p {
+  margin-bottom: .6em;
+  font-size: 1.1em;
+}
+
+.wpcf7 textarea {
+  margin-bottom: 0.6em;
+  width: 450px;
+}
+
+.wpcf7 input[type="text"],
+input[type="email"] {
+  width: 450px;
+  height: 34px;
+}
+
+.wpcf7-submit {
+  width: 180px;
+  height: 34px;
+  font-size: 1.5em;
+  margin-top: .6em;
+}
+
+.wpcf7-list-item-label {
+  padding-right: 10px;
+}
+/* END CONTACT FORM 7 STYLES */
+
+/* START INPUT FORM */
+/* search form input */
+input#s {
+	height: 24px;	
+}
+/* END INPUT FORM */
+
+/* START WOO COMMERCE OVERRIDE STYLES */
+
+/* Full Path: html body.product-template-default.single.single-product.postid-1242.logged-in.admin-bar.no-customize-support.woocommerce.woocommerce-page.woocommerce-no-js div#wrapper div.middle div.content article#post-1242.post div.woocommerce div.single-product div#product-1242.post-1242.product.type-product.status-publish.has-post-thumbnail.product_cat-t-shirts.first.instock.taxable.shipping-taxable.purchasable.product-type-simple div.woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images */
+
+/* Path to following rule: woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4. */
+
+.woocommerce .single-product .images {
+	opacity: 1 !important;
+	/* transition: opacity .25s ease-in-out; */
+}
+/* END WOO COMMERCE OVERRIDE STYLES */
+
+/*** END PLUGIN OVERRIDE STYLES ***/
+
+/* START WORDPRESS GENERATED CLASSES (with a few custom alterations and additions) */
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    /*margin: 5px auto 5px auto;*/
+	margin: 0 auto 15px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* image does not overflow the content area */
+    /*padding: 5px 3px 10px; */
+	padding: 5px 3px 10px;
+    text-align: center; /* also aligns the image to the center of div.wp.caption */
+}
+
+.wp-caption a {
+  border-bottom: none;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+	border: 3px solid #FFF;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;	
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: .6875em; /* 11 / 16 */
+    /*line-height: 1.0625;*/ /* 17 / 16 */
+    margin: 0;
+    padding: 0 4px 5px;
+	color: #000; /* caption under pictures Bio page */
+}
+
+/* Prevents the great collapse */
+.content article.post-excerpt {
+	overflow: hidden;
+	margin-bottom: 20px;	
+}
+
+/* Sinkula will switch to box-sizing: border-box only for images */
+.content.img {
+	box-sizing: border-box; 
+}
+
+.content img.featured {
+	 margin-bottom: 10px;	
+}
+
+/* Post Thumbnails */
+.content img.wp-post-image {
+	border: 5px solid #FFF;
+}
+
+.single img.wp-post-image {
+	border: 3px solid #FFF;
+}
+
+/* Floats thumbnail image to the left and 
+   puts proper margins on thumbnail image. */
+.content img.attachment-thumbnail {
+	float: left;
+	margin: 4px 20px 0 0;	
+}
+
+.content img.attachment-medium {}
+
+.content img.attachment-large {}
+
+.content img.attachment-full {}
+/* End Post Thumbnails */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	/*font-size: .875em; *//* 14 / 16 */
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+/* END WORDPRESS GENERATED CLASSES (with a few custom alterations and additions) */
+
+
+/* DESKTOP & MOBILE SCREENS 860px AND SMALLER */
+@media screen and (max-width: 860px) {
+  	body {
+		padding: 0;
+	}
+	
+	#wrapper {
+		margin: 0;
+	}
+
+	header {
+		width: auto;
+		margin: 0 auto;
+		overflow: hidden;
+		max-width: 700px;
+		padding: 0;
+	}
+	
+	.middle {
+		float: none;
+		margin: 0 auto;
+		padding-top: 15px;
+		overflow: hidden;
+	}
+	
+	footer.footer-basic {
+		float: left;
+	}
+	
+	footer {
+		float: none;
+		margin: auto;	
+	}
+	
+	/* NAV-MAIN STYLES */
+	#toggle {
+		display: block;
+	}
+	
+	nav#nav-main {
+		display: none;
+		width: auto;
+		max-width: 700px;
+		margin: 0 auto;
+		padding-left: 5px;
+		float: none;
+	}
+	
+	nav#nav-main ul li a {
+		text-align: left;
+	}
+	
+	#main-menu > li {
+		padding: 8px 20px;
+	}
+	
+	#menu-main li {
+		line-height: 1.25;
+		margin-bottom: 0px;
+		border-bottom: 1px solid #DDD;
+	}
+		
+	#menu-main li:last-child {
+		/*border-bottom: none;*/
+	}
+	
+	#menu-main li ul li:last-child {
+		border-bottom: none;
+	}
+		
+	#menu-main ul.sub-menu li {
+		line-height: 1.25;
+		display: block;
+		text-align: left;
+		margin-bottom: 0px;
+		margin-left: 10px;
+	}
+		
+	#menu-main li.current-menu-parent ul.sub-menu, 
+	#menu-main li.current_page_parent ul.sub-menu, 
+	#menu-main li.current-menu-item ul.sub-menu, 
+	body.attachment #menu-main li.menu-item-1445 ul.sub-menu {
+		display: block;
+	}
+	/* END NAV-MAIN STYLES */
+}
+
+@media screen and (max-width: 768px) {
+ 	/* START FOOGALLERY STYLES */
+	/* Show caption to avoid Mystery Meat Navigation (no mouse hovering on phones!) */
+	/* Accomodates iPad portrait view and all phones including iPhone 6 Plus @736px width */
+	/* .foogallery-link-custom is for gateway pages (as opposed to gallery pages) */
+    /*.foogallery-link-custom.foogallery-default.hover-effect-caption.hover-caption-simple .foogallery-caption {
+		-moz-transform: translateY(0%) !important;
+		-o-transform: translateY(0%) !important;
+		-webkit-transform: translateY(0%) !important;
+		transform: translateY(0%) !important;
+	}
+	
+	.foogallery-container.foogallery-default.foogallery-link-custom.foogallery-lightbox-foobox-free.spacing-width-20.hover-effect-zoom.hover-effect-caption.alignment-left.hover-caption-simple
+	{
+		-moz-transform: translateY(0%) !important;
+		-o-transform: translateY(0%) !important;
+		-webkit-transform: translateY(0%) !important;
+		transform: translateY(0%) !important;
+	} */
+	
+	.fg-caption .fg-caption-title {
+	/*visibility: visible !important;*/
+	text-align: center !important;
+	}
+	
+	/*figcaption.fg-caption {
+		visibility: visible !important;
+	}
+	
+	.fg-caption > .fg-caption-inner > .fg-caption-title {
+		visibility: visible !important;
+	}
+	
+	.foogallery .fg-loaded .fg-item-inner
+	
+	.fg-caption-always {
+		display: block;	
+		visibility: visible !important;
+	}
+	
+	.fg-caption-hover {
+	 display: none;	
+	 visibility: hidden !important;
+	}*/
+	
+	
+	/*
+	
+	fg-caption-inner*/
+	
+	/*.foogallery .fg-caption-title {
+	 /*bottom: 0;*/
+	 /* visibility: visible;	
+	}
+	
+	.foogallery.fg-caption-always .fg-item.fg-loaded .fg-caption {
+	 visibility: visible;	
+	}*/
+	
+	.foogallery.fg-caption-always .fg-item.fg-loaded .fg-caption {
+		text-align: center;	
+	}
+	
+	
+	/* END FOOGALLERY STYLES */
+}
+
+@media screen and (max-width: 725px) {
+	/* START GLOBAL STYLES @725px */
+	#wrapper {
+		width: 97.5%;
+		margin: auto;
+	}
+	
+	nav#nav-main {
+		padding-left: 0;
+	}
+	
+	nav#nav-main ul {
+		margin-top: 0;
+	}
+	
+	#nav-main li a {
+		padding-left: 10px;
+		padding-right: 10px;	
+	}
+	
+	#toggle {
+		margin-right: 10px;
+	}
+	
+	.middle {
+		max-width: 700px;
+		width: 100%;
+	}
+	
+	.content {
+	  width: 100%;
+	  float: none;
+	  clear: both;	
+	  padding: 0;
+	}
+	
+	.sidebar {
+	  width: 100%;
+	  float: none;
+	  clear: both;
+	}
+	
+	/* Search form input */
+	input#s {
+		height: 34px;	
+	}
+	/* END GLOBAL STYLES @725px */
+	
+	/* START HOME PAGE STYLES @725px  */
+	/* FRONT PAGE FLEXSLIDER STYLES @725px */
+	/* The <div> containing the images. */
+	.flexslider { 
+		max-width: 500px;
+		width: 100% !important;
+		height: auto;
+		background-color: #000000 !important;
+	}
+	
+	.flexslider .slides img {
+		height: auto !important;
+	}
+	
+	ul.slides {
+		width: 100% !important;
+		margin-right: 20px !important;
+	}
+	
+	/* flexslider */
+	.home img.attachment-large.size-large {
+		box-sizing:border-box;	
+		width: 100% !important;
+		background-color: #000000 !important;
+	}
+	/* END FRONT PAGE FLEXSLIDER STYLES @725px */
+	
+	/* START 'BASIC' FOOTER STYLES - NO NAVIGATION (as on front-page.php) */
+	/* Keeps the front-page footer div under the image. */
+	.home footer.footer-basic {
+		max-width: 500px;
+		width: 100%;
+		float: none;
+		padding: 0;
+		font-size: .75em; /* 12px /16px */
+		float: left;
+		text-align: right;
+	}
+	/* END 'BASIC' FOOTER STYLES - NO NAVIGATION (as on front-page.php) */
+	/* END HOME PAGE STYLES @725px */
+	
+	/* START PAGE-TEMPLATE-DEFAULT STYLES @725px */
+	.page-template-default .middle.home-page {
+		padding-left: 0;
+	}
+	
+	.page-template-default .sidebar {
+		padding-right: 10px;	
+		margin-right: 10px;	
+	}
+	/* END PAGE-TEMPLATE-DEFAULT STYLES @725px */
+	
+	/* START BLOG / EVENTS STYLES @725px */
+	article.blog-excerpt {
+		padding-right: 5px;	
+	}
+	/* END BLOG / EVENTS STYLES @725px */
+	
+	/* START PORTFOLIO @725px */
+	/* START WP GALLERY */
+	.gallery figure:nth-child(3n+0) {
+		margin-right: 20px;
+	}
+	/* END WP GALLERY */
+	
+	/* START FOOGALLERY */
+	.foogallery-container {
+		clear: both;
+		width: 480px;
+/*		margin: auto;
+		padding-left: 20px;*/
+	}
+	
+	/* Probably for the 2016 CSS */
+	/*.foogallery-default.spacing-width-20 a:nth-child(3n+0) {
+		margin-right: 20px;		
+	}*/
+		
+	/* Brings back the margin to ever other third thumbnail in the portfolio,
+	the margin needed to be removed for screen sizes larger than 725px */
+	.fg-item.fg-loaded:nth-child(3n) {
+		margin-right: 20px;
+	}
+	/* END FOOGALLERY */
+	
+	.page-template-page-portfolio-gateway .middle,
+	.page-template-page-portfolio .middle,
+	.page-template-page-portfolio-back .middle,
+	.page-template-page-portfolio-more .middle,
+	.page-template-page-portfolio-back-more .middle {
+		clear: both;
+		width: 480px;
+		margin: auto;
+		padding-left: 20px;
+	}
+	
+	.page-template-page-portfolio-gateway p,
+	.page-template-page-portfolio p, 
+	.page-template-page-portfolio-back-more p, 
+	.page-template-page-portfolio-back p, 
+	.page-template-page-portfolio-more p {
+		display: inline;
+		font-size: .75em;
+	}
+	
+	/* Appears centered above both thumbnail columns. */
+	div#nav-back-more {
+		width: 460px;
+		clear: both;
+		float: none;
+		display: block;
+	}
+	/* END PORTFOLIO @725px */
+}
+
+@media screen and (max-width: 600px) {
+	.middle .about-content section {
+		font-size: .85em;
+	}
+	
+	.page-template-page-portfolio-gateway p,
+	.page-template-page-portfolio p, 
+	.page-template-page-portfolio-back-more p, 
+	.page-template-page-portfolio-back p, 
+	.page-template-page-portfolio-more p {
+		max-width: 460px;
+		clear: both;	
+		display: block;
+		font-size: .75em;
+	}
+	
+	.page-template-page-portfolio h4 {
+		clear: both;
+	}
+	
+	#logo { 
+		width: 300px; 
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 525px) {
+	/* START GLOBAL STYLES */
+	div span.title-width {
+		width: 100%;	
+	}
+	
+	#hoverNav {
+		width: 49.5% !important;	 
+	}
+	/* END GLOBAL STYLES */
+	
+	/* START PORTFOLIO <= 500px */
+	/* Centers single-stacked gallery images. */
+	.page-template-page-portfolio-gateway .middle,
+	.page-template-page-portfolio .middle,
+	.page-template-page-portfolio-back .middle,
+	.page-template-page-portfolio-more .middle,
+	.page-template-page-portfolio-back-more .middle {
+		clear: both;
+		width: 240px;
+		margin: auto;
+	}
+	
+	.foogallery-container {
+		clear: both;
+		width: 240px;
+		margin: auto;
+		margin-left: 0;
+	}
+	
+	div#nav-back-more {
+	  width: 220px;
+	}
+	/* END PORTFOLIO <= 500px */
+	
+	/* START SINGLE.PHP */
+	/* START COMMENTS */
+	/* Name, Mail, Website */
+	#respond input {
+		max-width: calc(100% * (640/700));
+	}
+	
+	textarea#comment {
+		max-width: calc(100% * (640/700));
+	}
+	
+	/* Start Sinkula's jetcityimprov.org comment form */
+	#comment-form input {
+		max-width: calc(100% * (640/700));	
+	}
+	
+	#comment-form text-area {
+		max-width: calc(100% * (640/700));
+	}
+	/* End Sinkula's jetcityimprov.org comment form */
+	/* END COMMENTS */
+	/* END SINGLE.PHP */
+	
+	/* START FOOTER */
+	nav#nav-footer,
+	nav.nav-footer-utility {
+		display: none;	
+	}
+	
+	footer p.footer-basic {
+		display: block;	
+		font-size: .75em;
+	}
+	
+	/* Aligns copyright to the right under single-stacked gallery images. */
+	.page-template-page-portfolio-gateway footer,
+	.page-template-page-portfolio footer,
+	.page-template-page-portfolio-back footer,
+	.page-template-page-portfolio-more footer,
+	.page-template-page-portfolio-back-more footer {
+		width: 220px;
+		text-align: right;
+		padding-top: 0;
+	}
+	/* END FOOTER */
+	
+	/* START CONTACT FORM 7 STYLES */
+	.wpcf7 textarea {
+	  max-width: calc(100% * (640/700));
+	}
+	
+	.wpcf7 input[type="text"],
+	input[type="email"] {
+	  max-width: calc(100% * (640/700));
+	}
+	/* END CONTACT FORM 7 STYLES */
+}
+
+@media screen and (max-width: 400px) {
+	header {
+		height: auto;
+		margin-top: 5px;	
+	}
+	
+	#logo img.desktop {
+		display: none;
+	}
+	
+	#logo img.phone {
+		display: inline-block;
+		height: auto;
+		width: 200px;
+	}
+	
+	h1 {
+		font-size: 1.75em; /* 28 / 16px = 175% */		
+	}
+	
+	#nav-back-more {
+	  padding-top: 5px;
+	}
+	
+	.content,
+	.sidebar {
+	  padding: 0;
+	}
+	
+	#toggle {
+		margin-top: 20px;	
+		padding-top: 20px;
+		margin-right: 5px;
+	}
+	
+	.middle .about-content section {
+		font-size: .85em;
+	}
+	
+	.middle .about-content section .wp-caption {
+		max-width: 120px !important;
+		width: 100%;	
+		line-height: 1.275;	
+	}
+	
+	.middle .about-content section .wp-caption a img {
+		box-sizing:border-box;
+		max-width: 100%;
+		border: 3px solid #FFF;
+	}
+
+	.middle .about-content section .wp-caption p.wp-caption-text {
+		display: inline;
+	}
+	
+	#hoverNav {
+		width: 40% !important;	 
+	 }
+}
+
+@media screen and (max-width: 360px) { 
+	 #hoverNav {
+		width: 36% !important;	 
+	 }
+	
+	.sidebar {
+	    padding: 0;
+	}
+	
+	article.blog-excerpt p {
+	    clear: both;
+	    font-size: .85em;
+	}
+	
+	.content img.attachment-thumbnail {
+		float: left;
+		margin: 4px 20px 20px 0;
+		height: auto;	
+	}
+	
+	.wp-post-image a {
+		margin-bottom: 115px;
+	}
+	
+}
+
