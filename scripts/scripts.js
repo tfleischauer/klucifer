@@ -76,29 +76,7 @@ function showFooGalleryCaptions() {
 
 function removeFeaturedImageCaptions() {
 	$(".page-template-page-video .wp-caption.aligncenter").remove();
-	// $(".page-template-page-merch .wp-caption.aligncenter").remove();
-	// $(".single .wp-caption.aligncenter img").parent(".wp-caption.aligncenter").remove();
-	
-	//if ($(".single .wp-caption.aligncenter img").length) {
-//		$(".single .wp-caption.aligncenter").remove();
-//	}
-	
-//	var imgInCaption = $(".single div.wp-caption.aligncenter");
-//		// if (imgInCaption.children().not("img.wp-post-image").length()) {
-//		if (imgInCaption.children().not(":has(img.wp-post-image)")) {
-//			$(".single div.wp-caption.aligncenter").remove();
-//		}
-
-// var pt = $("p:not(:has(img))");
 }
-
-
-//jQuery(document).ready(function($) {
-//	var caption = document.querySelector( '.wp-caption-text' );
-//	if ( !caption.previousElementSibling ) {
-//	caption.parentElement.remove();
-//	}
-//});
 
 jQuery(document).ready(function($) {
 	var caption = document.querySelectorAll( '.wp-caption' );
