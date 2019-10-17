@@ -5,7 +5,7 @@ Theme Name: Klucifer
 Author: Troy Fleischauer
 Author URI: http://www.portfolio.troyfleischauer.com
 Description: Custom theme for rickklu.com
-Version: 190122
+Version: 190124
 */
 
 /* DEVO ONLY -- delete when no longer needed */
@@ -116,8 +116,6 @@ nav.woocommerce-breadcrumb {
 img.wp-post-image {
 	opacity: 1 !important;	
 	background-color: grey !important;		
-	outline: 1px solid red !important;	
-	width: 25% !important;
 }
 
 .woocommerce-product-gallery images {
@@ -131,7 +129,6 @@ img.wp-post-image {
 
 .woocommerce-tabs.wc-tabs-wrapper {
 	/* padding-left: 50px; */
-	
 }
 
 /* End WooCommerce Divs */

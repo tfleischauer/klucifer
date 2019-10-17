@@ -25,7 +25,7 @@
 	<p><?php // _e( 'Sorry, no posts matched your criteria.' ); ?></p>
   <?php endif; // end the loop ?>
   
-  <small>page-no-dynamic-sidebar.php</small>
+  <!--<small>page-no-dynamic-sidebar.php</small>-->
 
 </div>
 <!-- End Content -->

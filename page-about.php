@@ -23,7 +23,7 @@
 	<p><?php // _e( 'Sorry, no posts matched your criteria.' ); ?></p>
   <?php endif; // end the loop ?>
   
-  <small>page-about.php</small>
+  <!--<small>page-about.php</small>-->
 
 <!--</div>-->
 <!-- End Content -->

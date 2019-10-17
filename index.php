@@ -29,7 +29,7 @@
     </article>
     
     <?php endwhile; else : ?>
-		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		<p>Sorry, no posts matched your criteria.</p>
   	<?php endif; // end the loop ?>
     
     <nav class="prev-next-posts">
@@ -37,7 +37,7 @@
      <p class="alignright"><?php previous_posts_link('Newer Posts &raquo;') ?></p>
   	</nav>
   
-  <small>index.php</small>
+  <!--<small>index.php</small>-->
 
 </div>
 <!-- End Content -->

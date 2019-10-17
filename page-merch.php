@@ -40,12 +40,12 @@
 	  <p>No events are scheduled at this time.</p>
     <?php endif; // end the loop ?>
   
-    <small>page-merch.php</small>
+    <!--<small>page-merch.php</small>-->
 
 </div>
 <!-- End Content -->
 
-<?php get_sidebar(); ?>
+<?php // get_sidebar(); ?>
 
 </div>
 <!-- End Middle -->
