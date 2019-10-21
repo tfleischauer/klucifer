@@ -32,12 +32,12 @@
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
   <?php endif; // end the loop ?>
   
-  <small>single.php</small>
+  <!--<small>single.php</small>-->
 
 </div>
 <!-- End Content -->
 
-<?php get_sidebar(); ?>
+<?php /*?><?php get_sidebar(); ?><?php */?>
 
 </div>
 <!-- End Middle -->
