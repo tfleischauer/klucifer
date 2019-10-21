@@ -2,12 +2,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
 
 <!--
 Theme Name: Klucifer
 Author: Troy Fleischauer
 Author URI: http://www.portfolio.troyfleischauer.com
-Description: Custom theme for rickklu.com
+Description: Development installation
 -->
 
 <!-- Start Title Tag -->
@@ -15,7 +16,9 @@ Description: Custom theme for rickklu.com
 <!-- End Title Tag -->
 
 <!-- Start Meta -->
+<!-- strip_tags removes html tags and returns text within. get_the_excerpt gets excerpt from the page. bloginfo('description') gets the tagline. -->
 <meta name="description" content="<?php echo strip_tags(get_the_excerpt()); ?>" />
+
 <meta name="keywords" content="">
 <!-- to prevent rescaling in iphone -->
 <!--<meta name="viewport" content="user-scalable=no, intial-scale=1.0, maximum-scale=1.0" />-->
