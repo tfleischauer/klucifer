@@ -30,7 +30,7 @@
   <!-- Begin Widgets -->
   <div class="widget">
       <?php dynamic_sidebar(1); // Show on every page ?>
-	  <?php if (!( is_page() || is_search() || is_404() || is_contact() )) : // Show on every page except page.php, 404.php, and search.php ?>
+	  <?php if (!( is_page() || is_search() || is_404() )) : // Show on every page except page.php, 404.php, and search.php ?>
       <?php dynamic_sidebar(2); // Appears on index.php ?>
       <?php endif; ?>
       <?php dynamic_sidebar(3); // Show on every page ?>
@@ -49,5 +49,3 @@
      
  </div>
  <!-- End Sidebar -->
- 
-	
