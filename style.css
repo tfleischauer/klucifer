@@ -4,8 +4,8 @@
 Theme Name: Klucifer
 Author: Troy Fleischauer
 Author URI: http://www.portfolio.troyfleischauer.com
-Description: Custom theme for rickklu.com
-Version: 190124
+Description: Custom theme for development of rickklu.art
+Version: 191021
 */
 
 /* DEVO ONLY -- delete when no longer needed */
@@ -1002,10 +1002,51 @@ input#s {
 /* END INPUT FORM */
 
 /* START WOO COMMERCE OVERRIDE STYLES */
+
+/* WOOCOMMERCE LANDING PAGE - SHOWS ALL INVENTORY */
+/* Makes content span full width of middle div */
+body.woocommerce.woocommerce-page .middle .content.page {
+	width: 100%;
+}
+
+/* Makes height consistent allowing for two lines of product title */
+/*.woocommerce-page.columns-3 ul.products li.product, .woocommerce.columns-3 ul.products li.product {*/
+    /*height: 360px;*/
+	/*overflow: hidden;*/
+/*}*/
+
+/* Fixes button to the bottom of the div for consistency in button placement */
+/*ul.products li.product {
+	position: relative;	
+}
+
+li.product a.button {
+	position: absolute;
+	bottom: 0;
+}*/
+
+/* WOOCOMMERCE SINGLE PRODUCT PAGE */
 .woocommerce .single-product .images {
 	opacity: 1 !important;
 	/* transition: opacity .25s ease-in-out; */
 }
+
+/*body.product-template-default.single.single-product div.content {
+	width: 100%;	
+}*/
+
+/*div.woocommerce {
+	width: 100%;	
+}*/
+
+/*body.product-template-default.single.single-product .woocommerce {
+	width:100%;	
+}
+
+body.product-template-default.single.single-product .middle .content {
+	width:100%;	
+}*/
+
 /* END WOO COMMERCE OVERRIDE STYLES */
 
 /*** END PLUGIN OVERRIDE STYLES ***/
