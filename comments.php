@@ -42,7 +42,7 @@
 
 <?php if ('open' == $post->comment_status) : // if comments are open ?>
 
-<h2>Leave a Reply:</h2>
+<h2>Leave a Comment:</h2>
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>">logged in</a> to post a comment.</p>
 <?php else : ?>
